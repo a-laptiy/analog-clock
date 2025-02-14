@@ -78,7 +78,7 @@
 
             const secondsDeg = seconds < 60 ? 90 + seconds * 6 : 90;
             const minutesDeg = minutes < 60 ? 90 + minutes * 6 + seconds * 0.1 : 90;
-            const hoursDeg = hours < 24 ? 90 + hours * 30 + minutes * 0.5 : 90;
+            const hoursDeg = hours > 0 ? 90 + hours * 30 + minutes * 0.5 : 90;
 
             secondHand.style.transform = `rotate(${secondsDeg}deg)`;
             minuteHand.style.transform = `rotate(${minutesDeg}deg)`;
